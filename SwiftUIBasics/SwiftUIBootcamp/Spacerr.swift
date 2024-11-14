@@ -7,27 +7,66 @@
 
 import SwiftUI
 
-struct Spacer: View {
+struct Spacerr: View {
     var body: some View {
-        HStack(
-            spacing:0
-        ){
-            Rectangle()
-                .frame(width: 100,height: 100)
-            
+//        HStack(
+//            spacing:0
+//        ){
 //            Spacer()
 //                .frame(height: 10)
+//                .background(.orange)
+//            
+//            Rectangle()
+//                .frame(width: 50,height: 50)
+//            
+//            Spacer()
+//                .frame(height: 10)
+//                .background(.orange)
+//            
+//            Rectangle()
+//                .fill(.red)
+//                .frame(width: 50,height: 50)
+//            
+//            Spacer()
+//                .frame(height: 10)
+//                .background(.orange)
+//            
+//            Rectangle()
+//                .fill(.green)
+//                .frame(width: 50,height: 50)
+//            
+//            Spacer()
+//                .frame(height: 10)
+//                .background(.orange)
+//            
+//        }
+//        .background(.yellow)
+        
+        VStack {
+            HStack(
+                spacing:0
+            ){
+                
+                Image(systemName: "xmark")
+                Spacer()
+                Image(systemName: "gear")
+            }
+            .font(.title)
+            //.background(.yellow)
+            .padding(.horizontal)
+            //.background(.blue)
             
             Spacer()
+                .frame(width: 10)
             
             Rectangle()
-                .fill(.red)
-                .frame(width: 100,height: 100)
+                .frame(height: 55)
         }
-        .background(.blue)
+        //.background(.yellow)
+        
     }
 }
 
 #Preview {
-    Spacer()
+    Spacerr()
 }
