@@ -7,23 +7,30 @@
 
 import SwiftUI
 
-struct ColorPicker: View {
+struct ColorPickers: View {
     
-    @State var backColor:Color = .green
+    @State var backColor:Color = .gray.opacity(0.3)
     var body: some View {
         ZStack {
-            Color.red.ignoresSafeArea()
+            backColor.ignoresSafeArea()
             
             
             
             ColorPicker(
                 "Select a color",
-                selection: $backColor
+                selection: $backColor,
+                supportsOpacity: true
             )
+            .padding()
+            .background(.black)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .font(.headline)
+            .padding(50)
         }
     }
 }
 
 #Preview {
-    ColorPicker()
+    ColorPickers()
 }
