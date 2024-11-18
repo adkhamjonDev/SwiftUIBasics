@@ -9,7 +9,25 @@ import SwiftUI
 
 struct SystemMaterialsAndBackgrounds: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            Spacer()
+            VStack {
+                RoundedRectangle(cornerRadius: 4)
+                    .frame(width: 50,height: 4)
+                    .padding()
+                Spacer()
+            }
+            .frame(height: 300)
+            .frame(maxWidth: .infinity)
+            .background(.ultraThinMaterial)
+            .cornerRadius(30)
+        }
+        .ignoresSafeArea()
+        .background(
+            Image("icybay")
+                .resizable()
+        )
     }
 }
 
