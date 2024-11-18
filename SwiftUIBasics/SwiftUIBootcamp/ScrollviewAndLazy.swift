@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ScrollviewAndLazy: View {
+    
+
+    
     var body: some View {
 //        ScrollView(.horizontal,showsIndicators: false,content:{
 //           
